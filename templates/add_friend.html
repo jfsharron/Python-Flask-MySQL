@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div>
+
+    <h3>Add a New Friend</h3>
+
+    <form method = "POST" action = "">
+
+        {{ form.csrf_token }}
+        {{ form.first_name.label }} {{ form.first_name(size = 20) }}
+        {{ form.last_name.label }} {{ form.last_name(size = 20) }}
+
+        <input type = "submit" value = "Add Friend">
+
+    </form>
+
+</div>
+{% endblock %}
